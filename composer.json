@@ -24,6 +24,8 @@
             "About\\": "modules/About/",
             "Contact\\": "modules/Contact/",
             "Blog\\": "modules/Blog/",
+            "Course\\": "modules/Course/",
+            "User\\": "modules/User/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
