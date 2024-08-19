@@ -61,7 +61,7 @@
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
+                            <a class="nav-link" href="{{route('blog-page')}}">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('about-page')}}">About</a>

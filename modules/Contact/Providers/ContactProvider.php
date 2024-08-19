@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class ContactProvider extends ServiceProvider
 {
-    public function register()
+    public function boot()
     {
         $this->loadRoutesFrom(__DIR__ . './../Routes/ContactRoutes.php');
         $this->loadViewsFrom(__DIR__ . '/../Resourses/Views', 'ContactViews');

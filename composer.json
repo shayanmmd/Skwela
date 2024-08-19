@@ -23,6 +23,7 @@
             "App\\": "app/",
             "About\\": "modules/About/",
             "Contact\\": "modules/Contact/",
+            "Blog\\": "modules/Blog/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
