@@ -26,26 +26,32 @@
 
                     <div class="row">
                         <div class="col-md-12 form-group">
-                            <label for="name">Email Address</label>
+                            <label for="name">Name</label>
                             <input type="text" id="name" class="form-control ">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 form-group">
+                            <label for="name">Email Address</label>
+                            <input type="text" id="email" class="form-control ">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
                             <label for="name">Password</label>
-                            <input type="password" id="name" class="form-control ">
+                            <input type="password" id="password" class="form-control ">
                         </div>
                     </div>
                     <div class="row mb-5">
                         <div class="col-md-12 form-group">
                             <label for="name">Re-type Password</label>
-                            <input type="password" id="name" class="form-control ">
+                            <input type="password" id="re-password" class="form-control ">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 form-group">
-                            <input type="submit" value="Login" class="btn btn-primary">
+                            <input type="submit" value="Register" class="btn btn-primary">
                         </div>
                     </div>
                 </form>
