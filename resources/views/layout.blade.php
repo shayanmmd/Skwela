@@ -34,25 +34,22 @@
 
                 <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
                     <ul class="navbar-nav mx-auto">
+
+                        @foreach (App\Models\Navlink::all() as $navlink )
                         <li class="nav-item">
+                            <a class="nav-link" href="{{route($navlink->link)}}">{{$navlink->name}}</a>
+                        </li>
+                        @endforeach
+
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{{route('home')}}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('course-page')}}">Courses</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Online Courses</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown04">
-                                <a class="dropdown-item" href="courses.html">HTML</a>
-                                <a class="dropdown-item" href="courses.html">WordPress</a>
-                                <a class="dropdown-item" href="courses.html">Web Development</a>
-                                <a class="dropdown-item" href="courses.html">Javascript</a>
-                                <a class="dropdown-item" href="courses.html">Photoshop</a>
-                            </div>
+                        </li> -->
 
-                        </li>
 
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown05">
                                 <a class="dropdown-item" href="#">HTML</a>
@@ -62,8 +59,8 @@
                                 <a class="dropdown-item" href="#">Photoshop</a>
                             </div>
 
-                        </li>
-                        <li class="nav-item">
+                        </li> -->
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{{route('blog-page')}}">Blog</a>
                         </li>
                         <li class="nav-item">
@@ -71,16 +68,27 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('contact-page')}}">Contact</a>
-                        </li>
+                        </li> -->
                     </ul>
+                    @if (!auth()->check())
                     <ul class="navbar-nav absolute-right">
                         <li class="nav-item">
-                            <a href="{{route('login-page')}}"class="nav-link">Login</a>
+                            <a href="{{route('login-page')}}" class="nav-link">Login</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('register-page')}}" class="nav-link">Register</a>
                         </li>
                     </ul>
+                    @else
+                    <ul class="navbar-nav absolute-right">
+                        <span class="nav-link">{{Auth::user()->name}}</span>
+
+                        <a style="color: red;"  href="#" onclick="event.preventDefault(); document.getElementById('my-form').submit();" class="nav-link">logout</a>
+                        <form id="my-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </ul>
+                    @endif
 
                 </div>
             </div>

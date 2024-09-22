@@ -22,17 +22,18 @@
         <div class="row justify-content-center">
             <div class="col-md-5 box">
                 <h2 class="mb-5">Log in with your account</h2>
-                <form action="#" method="post">
+                <form action="{{route('login-store')}}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-md-12 form-group">
-                            <label for="name">Username</label>
-                            <input type="text" id="name" class="form-control ">
+                            <label for="email">Email</label>
+                            <input name="email" type="text" id="email" class="form-control ">
                         </div>
                     </div>
                     <div class="row mb-5">
                         <div class="col-md-12 form-group">
                             <label for="name">Password</label>
-                            <input type="password" id="name" class="form-control ">
+                            <input name="password" type="password" id="name" class="form-control ">
                         </div>
                     </div>
 
